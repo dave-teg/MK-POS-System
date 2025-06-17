@@ -26,8 +26,9 @@ export const analyticsApiSlice = apiSlice.injectEndpoints({
     getYearlySales: builder.query({
       query: () => '/analytics/sales/yearly',
       transformResponse: (response) => ({
-        yearlySales: response.data.yearlySalesData.yearlySales.map((day) => parseInt(day.total_sales)),
-        yearlyOrders: response.data.yearlySalesData.yearlySales.map((day) => parseInt(day.order_count)),
+        yearlySales: response.data.yearlySalesData.yearlySales.map((data) => parseInt(data.total_sales)),
+        yearlyOrders: response.data.yearlySalesData.yearlySales.map((data) => parseInt(data.order_count)),
+        salesMonth: response.data.yearlySalesData.yearlySales.map((data) => data.sales_month),
         trend: response.data.yearlySalesData.trend,
         totalSales: response.data.yearlySalesData.totalSales.total_sales
       })

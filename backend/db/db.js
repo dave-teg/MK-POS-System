@@ -8,6 +8,9 @@ export const pool = new Pool({
   database: process.env.PGDATABASE,
   port: process.env.PGPORT,
   password: process.env.PGPASSWORD,
+  ssl: {
+    rejectUnauthorized: false,  // Required for Neon's free tier
+  }
 });
 
 export const query = async (text, params) => {

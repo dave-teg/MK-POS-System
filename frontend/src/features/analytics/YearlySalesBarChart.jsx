@@ -8,6 +8,16 @@ import { BarChart } from '@mui/x-charts/BarChart';
 import { useTheme } from '@mui/material/styles';
 import { useGetYearlySalesQuery } from './analyticsApiSlice';
 
+
+
+function convertToMonthShortNames(salesMonth) {
+  return salesMonth.map(monthStr => {
+    const [year, month] = monthStr.split("-");
+    const date = new Date(year, month - 1); // month is 0-based
+    return date.toLocaleString("en-US", { month: "short" }); // e.g., Jan, Feb
+  });
+}
+
 export default function YearlySalesBarChart() {
   const {data: yearlyData} = useGetYearlySalesQuery()
 
@@ -69,7 +79,8 @@ export default function YearlySalesBarChart() {
             {
               scaleType: 'band',
               categoryGapRatio: 0.5,
-              data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              /* data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], */
+              data: convertToMonthShortNames(yearlyData.salesMonth),
               height: 24,
             },
           ]}
