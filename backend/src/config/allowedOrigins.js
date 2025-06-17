@@ -1,3 +1,3 @@
-const allowedOrigins = ["http://localhost:5173", "http://localhost:5174"];
+const allowedOrigins = [process.env.ALLOWED_ORIGIN];
 
 export default allowedOrigins;
