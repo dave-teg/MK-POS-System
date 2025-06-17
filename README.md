@@ -1,0 +1,17 @@
+# MK Point of Sale (POS) System
+
+A full-stack Point of Sale (POS) system built for nightclub environments, supporting fast order placement, sales analytics, category/product management, and receipt printing.
+
+## Tech Stack
+- Frontend: React, Vite, MUI, Redux Toolkit, RTK Query
+- Backend: Node.js, Express.js, PostgreSQL
+- Auth: JWT-based Authentication
+
+## Features
+-  Order placement with invoice number tracking
+-  Category and Product Management
+-  Receipt printing (thermal receipt style)
+-  Analytics Dashboard (daily, weekly, monthly, yearly sales)
+- JWT Authentication (Admin & Cashier roles)
+-  Role-based access control (`admin`, `user`)
+-  dark mode support
