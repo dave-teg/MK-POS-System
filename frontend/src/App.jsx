@@ -17,7 +17,6 @@ import NewProduct from "./features/products/NewProduct";
 import EditProduct from "./features/products/EditProduct";
 import Users from "./features/users/Users";
 import EditUser from "./features/users/EditUser";
-import ReceiptPreview from "./components/RecieptPreview";
 import RequireAuth from "./features/auth/RequireAuth";
 import PersistLogin from "./features/auth/PersistLogin";
 import SessionGuard from "./features/auth/SessionGuard";
