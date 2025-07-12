@@ -3,7 +3,7 @@ import { setCredentials, setSessionExpired } from '../../features/auth/authSlice
 
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: import.meta.env.VITE_API_URL,
+  baseUrl: 'https://mk-pos-system-production.up.railway.app/api',
   validateStatus: (response, result) => {
     return response.status >= 200 && response.status < 300 && !result?.isError;
   },
