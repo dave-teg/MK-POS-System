@@ -1,6 +1,6 @@
 # MK Point of Sale (POS) System
 
-A full-stack Point of Sale (POS) system built for nightclub environments, supporting fast order placement, sales analytics, category/product management, and receipt printing.
+A full-stack Point of Sale (POS) system built for a freelance client, the system will be used to manage sales for a nightclub business, supporting fast order placement, sales analytics, category/product management, and receipt printing.
 
 ## Tech Stack
 - Frontend: React, Vite, MUI, Redux Toolkit, RTK Query
