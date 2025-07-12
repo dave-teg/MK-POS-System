@@ -43,11 +43,9 @@ const capitalizeWords = (string) => {
     .join(" ");
 };
 
-
 const ProductGrid = () => {
-  const {isAdmin} = useAuth()
+  const { isAdmin } = useAuth();
   const { data: productRows, isLoading } = useGetAllProductsQuery();
-
 
   const navigate = useNavigate();
 
@@ -57,8 +55,6 @@ const ProductGrid = () => {
     },
     [navigate]
   );
-
-
 
   const columns = useMemo(
     () => [

@@ -1,9 +1,8 @@
 import React from "react";
 import { Box, Button, Typography, Tooltip, Grid } from "@mui/material";
-import ProductGrid from "./productGrid";
 import { Add } from "@mui/icons-material";
-import CustomButton from "../../components/CustomButton";
 import { useNavigate } from "react-router-dom";
+import ProductGrid from "./ProductGrid";
 
 const Products = () => {
   const navigate = useNavigate();

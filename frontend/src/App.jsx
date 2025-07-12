@@ -30,11 +30,6 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<LoginPage />} />
           <Route path="register" element={<RegisterPage />} />
-          <Route path="drawer" element={<MiniDrawer />} />
-          <Route path="clipped" element={<ClippedDrawer />} />
-          <Route path="toggleable" element={<ClippedMiniDrawer />} />
-          <Route path="card" element={<CardDemo />} />
-          <Route path="receipt" element={<ReceiptPreview />} />
 
           {/* Protected Routes */}
           <Route element={<SessionGuard />}>
