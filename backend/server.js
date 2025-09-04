@@ -24,6 +24,12 @@ app.use(cors(corsOptions))
 app.use(cookieParser())
 
 //routes
+
+// Simple route to check if the server is running
+app.get('/', (req, res) => {
+  res.json({ message: "API is running..." })
+})
+
 app.use("/api/auth", authRouter)
 app.use("/api/users", userRouter)
 app.use("/api/products", productRouter)
